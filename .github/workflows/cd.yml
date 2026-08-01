@@ -26,5 +26,6 @@ jobs:
           source: "./dist/*"               # Local files/folders to copy
           target: "/var/www/html/"            # Remote target directory
           strip_components: 1                   # Prevents creating a "dist" folder inside target
-          overwrite: true   
-      - run: nginx -s reload
+          overwrite: true
+          script: |
+            sudo nginx -s reload
