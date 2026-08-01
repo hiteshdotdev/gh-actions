@@ -24,7 +24,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT || 22 }} # Defaults to 22 if not set
           source: "./dist/*"               # Local files/folders to copy
-          target: "/var/www/app"            # Remote target directory
+          target: "/var/www/app/"            # Remote target directory
           strip_components: 1                   # Prevents creating a "dist" folder inside target
           overwrite: true
           script: |
