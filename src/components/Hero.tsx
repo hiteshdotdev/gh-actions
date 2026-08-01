@@ -11,7 +11,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 mb-6 animate-slide-up">
-            Pure <span className="text-emerald-600">Herbal</span> Wellness
+            Pure <span className="text-emerald-600">Herbal</span> Wellness & Curated
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed px-2">
