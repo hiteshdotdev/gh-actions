@@ -16,5 +16,14 @@ jobs:
       - run: npm install
       - run: npm run lint
       - run: npm run build
-      - run: ls -l 
-      - run: ls -l ./dist
+      - name: Copy directory to Production via SSH
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }} # Defaults to 22 if not set
+          source: "./dist"               # Local files/folders to copy
+          target: "/root/app/"            # Remote target directory
+          strip_components: 1                   # Prevents creating a "dist" folder inside target
+          overwrite: true   
