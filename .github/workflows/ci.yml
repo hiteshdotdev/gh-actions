@@ -1,6 +1,8 @@
 name: Checking lint and build test
 run-name: checking lint and build tests
 on: 
+  workflow_call: 
+  
   pull_request:
     branches:
       - main
