@@ -1,8 +1,6 @@
 name: Checking lint and build test
 run-name: checking lint and build tests
 on: 
-  workflow_call: 
-  
   pull_request:
     branches:
       - main
@@ -18,7 +16,3 @@ jobs:
       - run: npm install
       - run: npm run lint
       - run: npm run build
-      - uses: actions/upload-artifact@v4
-        with:
-          name: build-output
-          path: dist/
